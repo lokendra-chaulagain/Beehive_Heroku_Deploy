@@ -1,0 +1,61 @@
+.deleteSaveContainer {
+  height: 160px;
+  width: 150px;
+  border-radius: 6px;
+  padding-top: 5px;
+  padding-left: 10px;
+  background-color: white;
+  padding-right: 10px;
+  box-shadow: 0px 0px 5px -2px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 5px -2px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 5px -2px rgba(0, 0, 0, 0.75);
+
+  .dscItem {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    height: 35px;
+    border-radius: 20px;
+    padding-left: 10px;
+
+    &:hover {
+      background-color: blueviolet;
+      color: rgb(243, 238, 238);
+      transition: all 0.3s ease;
+
+      .dscIcon {
+        color: white;
+      }
+    }
+
+    .dscIcon {
+      color: blueviolet;
+    }
+    .decSspan {
+      font-size: 17px;
+      font-weight: 600;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .deleteSaveContainer {
+    margin-top: 50px;
+    height: 320px;
+    width: 220px;
+    margin-left: -100px;
+
+    .dscItem {
+      margin-top: 40px;
+      .dscIcon {
+        font-size: 50px;
+      }
+      .decSspan {
+        font-size: 32px;
+        font-weight: 600;
+      }
+    }
+  }
+}

@@ -1,0 +1,96 @@
+
+
+    .jobPostEditCon {
+      display: flex;
+      flex-direction: column;
+      padding: 20px 15px;
+      margin-bottom: 100px;
+
+      .jpecTitle {
+        font-size: 22px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .jpecHr {
+        margin-bottom: 20px;
+      }
+
+      .jpecImg {
+        width: 60px;
+        height: 60px;
+        border-radius: 100%;
+        margin-bottom: 15px;
+      }
+      .jpecIconAndTxt {
+        display: flex;
+        align-items: center;
+
+        .jpecImgIcon {
+          color: blueviolet;
+          font-size: 40px;
+          cursor: pointer;
+        }
+
+        .jpecSelectImgTxt {
+          font-size: 18px;
+          font-weight: 600;
+          color: rgb(43, 42, 42);
+          margin-left: 10px;
+        }
+      }
+
+      .jpecColumnCon {
+        display: flex;
+        flex-direction: column;
+
+        .jpec {
+          font-size: 18px;
+          font-weight: 600;
+          margin-top: 14px;
+          margin-bottom: 2px;
+        }
+
+        .jpecInput {
+          height: 32px;
+          outline: none;
+          border: none;
+          border: 1px solid grey;
+          border-radius: 2px;
+          padding-left: 5px;
+
+          &::placeholder {
+            color: black;
+          }
+        }
+
+        .jpecInput2 {
+          &::placeholder {
+            font-weight: 18px;
+            font-weight: 500;
+            color: grey;
+          }
+        }
+
+        .jpecInputTextArea {
+          max-width: 732px;
+          max-height: 300px;
+          min-height: 150px;
+        }
+
+        .jpecPostBut {
+          height: 38px;
+          background-color: blueviolet;
+          font-size: 17px;
+          font-weight: 600;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          color: white;
+          margin-top: 20px;
+          border-radius: 6px;
+        }
+      }
+    }

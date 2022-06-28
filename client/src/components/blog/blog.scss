@@ -1,0 +1,146 @@
+.blog {
+  height: 430px;
+  width: 350px;
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 16px;
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+
+  .blogImg {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    overflow: hidden;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+  }
+
+  .blogInsideCon {
+    padding: 0px 6px;
+    width: 310px;
+    height: 240px;
+    margin-left: 14px;
+    position: absolute;
+    bottom: 50px;
+    background-color: white;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+
+    .blogDateAndTimeRead {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 14px;
+      font-size: 14px;
+      font-weight: 600;
+      color: rgb(77, 76, 76);
+
+      .blogDate {
+        margin-right: 40px;
+      }
+    }
+
+    .blogTitle {
+      font-size: 22px;
+      font-weight: 700;
+      color: rgb(44, 44, 44);
+      margin-top: 14px;
+      cursor: pointer;
+      overflow: hidden;
+      max-height: 64px;
+
+      &:hover {
+        color: rgb(134, 70, 195);
+      }
+    }
+
+    .blogAuthorAndLocation {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 14px;
+      font-size: 14px;
+      font-weight: 600;
+      color: rgb(77, 76, 76);
+
+      .author {
+        color: blueviolet;
+        font-weight: 700;
+      }
+    }
+
+    .blogHr {
+      margin-top: 20px;
+    }
+
+    .blogContinueReading {
+      margin-top: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: blueviolet;
+      cursor: pointer;
+      border-bottom: 1px solid transparent;
+
+      &:hover {
+        border-bottom: 1px solid blueviolet;
+      }
+    }
+
+    .blogDeleteEditCon {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      margin-top: 15px;
+      gap: 20px;
+
+      .blogDeleteEditBut {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
+        padding: 3px 8px;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+
+        border: none;
+        outline: none;
+        border-radius: 10px;
+
+        .blogDEIcon {
+          font-size: 22px;
+        }
+      }
+      .blogDelete {
+        color: rgb(218, 217, 217);
+        background-color: blueviolet;
+        border: 1px solid blueviolet;
+
+        &:hover {
+          color: blueviolet;
+          background-color: rgb(218, 217, 217);
+          border: 1px solid blueviolet;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+      .blogEdit {
+        color: blueviolet;
+        background-color: rgb(218, 217, 217);
+        border: 1px solid blueviolet;
+
+        &:hover {
+          color: rgb(218, 217, 217);
+          background-color: blueviolet;
+          border: 1px solid blueviolet;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    }
+  }
+}

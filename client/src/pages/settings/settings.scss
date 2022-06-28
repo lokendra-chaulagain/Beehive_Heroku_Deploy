@@ -1,0 +1,357 @@
+.settingsPage {
+  height: 500vh;
+  margin-top: 60px;
+
+  .spWrapper {
+    .spBeforeSplit {
+      display: flex;
+
+      .spLeftCon {
+        flex: 1.1;
+        overflow-y: scroll;
+        height: 200vh;
+        display: flex;
+        justify-content: end;
+      }
+
+      .spCenterCon {
+        flex: 2.5;
+
+        .userCredentialEditCon {
+          margin-top: 60px;
+          padding-bottom: 30px;
+          margin-left: 10px;
+          margin-right: 10px;
+          box-shadow: 0px 0px 5px -1px rgba(0, 0, 0, 0.75);
+          -webkit-box-shadow: 0px 0px 5px -1px rgba(0, 0, 0, 0.75);
+          -moz-box-shadow: 0px 0px 5px -1px rgba(0, 0, 0, 0.75);
+
+          .usiRow1 {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .usiTitle {
+              font-size: 22px;
+              font-weight: 600;
+            }
+
+            .usiEditBut {
+              height: 40px;
+              width: 100px;
+              border-radius: 5px;
+              font-size: 18px;
+              font-weight: 500;
+              cursor: pointer;
+              background-color: blueviolet;
+              border: none;
+              color: white;
+
+              &:hover {
+                background-color: white;
+                border: 2px solid black;
+                color: black;
+                transition: all 0.3s ease-in-out;
+              }
+            }
+          }
+
+          .suiHr1 {
+            margin-top: 10px;
+            margin-bottom: 30px;
+          }
+          .suiHr2 {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            border: none;
+            height: 1px;
+            background-color: #333;
+            color: white;
+          }
+          .usiItemCon {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 50px;
+            background-color: #242526;
+            height: 50px;
+            color: white;
+
+            .usiItemTitle {
+              font-size: 18px;
+              color: white;
+            }
+          }
+        }
+
+        // User Credential Edit Mode Container
+        .userCredentialEditForm {
+          .userCredentialEditModeCon {
+            margin-top: 60px;
+            padding-bottom: 30px;
+            margin-left: 10px;
+            margin-right: 10px;
+            background-color: white;
+            box-shadow: 0px 0px 5px -1px rgba(0, 0, 0, 0.75);
+            -webkit-box-shadow: 0px 0px 5px -1px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 0px 5px -1px rgba(0, 0, 0, 0.75);
+
+            .ucemcRow1 {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+
+              .ucemcTitle {
+                font-size: 22px;
+                font-weight: 600;
+              }
+
+              .ucemcCancelBut {
+                height: 40px;
+                width: 100px;
+                border-radius: 5px;
+                font-size: 18px;
+                font-weight: 500;
+                cursor: pointer;
+              }
+            }
+
+            .ucemcHr1 {
+              margin-top: 10px;
+              margin-bottom: 30px;
+            }
+            .ucemcHr2 {
+              margin-top: 30px;
+              margin-bottom: 30px;
+              border: none;
+              height: 1px;
+              background-color: #333;
+            }
+            .ucemcSaveBut {
+              height: 40px;
+              width: 100px;
+              border-radius: 5px;
+              font-size: 18px;
+              font-weight: 600;
+              cursor: pointer;
+              background-color: blueviolet;
+              color: white;
+              border: none;
+              margin-bottom: 5px;
+
+              &:hover {
+                background-color: white;
+                border: 2px solid black;
+                color: black;
+                transition: all 0.3s ease-in-out;
+              }
+            }
+            .ucemcItemCon {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              padding: 0px 50px;
+              background-color: #242526;
+              height: 50px;
+
+              .ucemcItemTitle {
+                font-size: 18px;
+                color: white;
+              }
+              .ucemcItemTitleValueInput {
+                height: 35px;
+                width: 250px;
+                outline: none;
+                padding-left: 10px;
+                border: none;
+                font-size: 16px;
+
+                &::placeholder {
+                  font-size: 16px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .spRightCon {
+        flex: 1.4;
+        background-color: rgb(234, 231, 238);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .spLeftCon {
+    padding-left: 80px;
+  }
+
+  .spRightCon {
+    padding-right: 140px;
+  }
+}
+
+@media only screen and (max-width: 1120px) {
+  .spCenterCon {
+    margin-right: 80px;
+  }
+  .spRightCon {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  .settingsPage {
+    .spWrapper {
+      .spBeforeSplit {
+        .spCenterCon {
+          padding-left: 0px;
+          margin-right: 40px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .settingsPage {
+    .spWrapper {
+      .spBeforeSplit {
+        .spLeftCon {
+          margin-left: -20px;
+        }
+        .spCenterCon {
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .settingsPage {
+    .spWrapper {
+      .spBeforeSplit {
+        .spLeftCon {
+          padding-left: 50px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .settingsPage {
+    .spWrapper {
+      .spBeforeSplit {
+        .spLeftCon {
+          display: none;
+        }
+        .spCenterCon {
+          padding-left: 50px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .settingsPage {
+    .spWrapper {
+      .spBeforeSplit {
+        .spCenterCon {
+          padding-left: 5px;
+          padding-right: 5px;
+          margin-right: 0px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .settingsPage {
+    .spWrapper {
+      .spBeforeSplit {
+        .spCenterCon {
+          .userCredentialEditCon {
+            .usiItemCon {
+              .usiItemTitle {
+                margin-left: -40px;
+              }
+            }
+          }
+
+          .userCredentialEditForm {
+            .ucemcItemCon {
+              .ucemcItemTitle {
+                margin-left: -40px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .settingsPage {
+    .spWrapper {
+      .spBeforeSplit {
+        .spCenterCon {
+          .userCredentialEditForm {
+            .ucemcItemCon {
+              .ucemcItemTitleValueInput {
+                width: 200px !important;
+                margin-right: -40px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .settingsPage {
+    .spWrapper {
+      .spBeforeSplit {
+        .spCenterCon {
+          .userCredentialEditForm {
+            .ucemcItemCon {
+              .ucemcItemTitle {
+                display: none;
+              }
+              .ucemcItemTitleValueInput {
+                width: 270px !important;
+                margin-left: -50px !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .settingsPage {
+    .spWrapper {
+      .spBeforeSplit {
+        .spCenterCon {
+          .userCredentialEditForm {
+            .ucemcItemCon {
+              .ucemcItemTitleValueInput {
+                width: 240px !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

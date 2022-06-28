@@ -1,0 +1,86 @@
+.allCommentsContainer {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
+  margin: 10px;
+  position: absolute;
+  background-color: white;
+  height: 200px;
+  padding: 10px;
+  gap: 10px;
+  overflow-y: scroll;
+  width: 300px;
+
+  .allComments {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .allCommentClearIcon {
+      padding: 5px;
+      background-color: blueviolet;
+      border-radius: 50%;
+      color: white;
+      cursor: pointer;
+    }
+  }
+
+  .comment1 {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+
+    .commentImg {
+      height: 40px;
+      width: 40px;
+      // background-color: blueviolet;
+      border-radius: 50%;
+      overflow: hidden;
+      object-fit: cover;
+    }
+  }
+  .acViewProfile {
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 40px;
+  }
+  .acHr {
+    height: 1px !important;
+    background-color: grey;
+    color: grey;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .allCommentsContainer {
+    width: 400px;
+    min-height: 400px;
+
+    .allComments {
+      font-size: 30px;
+
+      .allCommentClearIcon {
+        font-size: 45px;
+      }
+    }
+    .comment1{
+      .commentImg{
+        height: 70px;
+        width: 70px;
+      }
+      .fullNameSpan{
+        font-size: 30px;
+      }
+
+    }
+    .acViewProfile{
+      font-size: 28px;
+    }
+  }
+}

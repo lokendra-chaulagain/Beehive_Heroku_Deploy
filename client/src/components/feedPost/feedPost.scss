@@ -1,0 +1,296 @@
+.feedPost {
+  border: 1px solid grey;
+  margin: 0px 15px;
+  background-color: white;
+  margin-bottom: 25px;
+  padding: 5px;
+
+  .fpRow1 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    // background-color: pink;
+
+    .fpProfilePic {
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      cursor: pointer;
+      border: 1px solid transparent;
+
+      &:hover {
+        border: 1px solid blueviolet;
+      }
+    }
+
+    .fpProfileInfoColumn {
+      margin-left: 8px;
+      display: flex;
+      flex-direction: column;
+      // background-color: red;
+
+      .fpUsername {
+        font-size: 16px;
+        font-weight: 700;
+        cursor: pointer;
+        width: 400px;
+
+        &:hover {
+          text-decoration: underline ;
+        }
+      }
+
+      .fpProfession {
+        font-size: 14px;
+        color: grey;
+        cursor: pointer;
+      }
+      .fpTime {
+        font-size: 12px;
+        color: grey;
+      }
+    }
+
+    .dltsveWrapper {
+      position: absolute;
+      margin-left: 500px;
+      margin-top: 100px;
+    }
+    .emptyDiv1 {
+      width: 68.5%;
+      height: 55px;
+      margin-right: 50px;
+    }
+
+    .fpMoreIconColumn {
+      display: flex;
+      padding: 10px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      // background-color: green;
+      margin-right: 20px;
+
+      &:hover {
+        background-color: blueviolet;
+        color: white;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+
+  .deleteSaveConWrapper {
+    display: flex;
+    position: absolute;
+    z-index: 99;
+    right: 460px;
+  }
+
+  .fpDesc {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .fpPostImg {
+    margin-top: 10px;
+    width: 100%;
+    object-fit: contain;
+    max-height: 250px;
+  }
+  .fpHr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 0;
+    border-top: 1px solid #e0e0e0;
+  }
+
+  .commentConWrapper2 {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+  }
+
+  .allLikesConWrapper {
+    position: relative;
+    top: -300px;
+    left: 20px;
+  }
+
+  .allCommentWrapper {
+    position: relative;
+    top: -180px;
+    left: 350px;
+  }
+
+  .fpIconsRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+    margin-top: 14px;
+    margin-bottom: 10px;
+
+    .fpLikeDislikeIconWrapper {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .whLiked {
+      margin-left: 20px;
+      font-weight: 600;
+      flex: 17px;
+      border-bottom: 2px solid transparent;
+      cursor: pointer;
+
+      &:hover {
+        border-bottom: 2px solid blueviolet;
+        color: blueviolet;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+
+    .fpIconsItemColumn {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      color: blueviolet;
+
+      .fpIconsItemIcon {
+        font-size: 20px;
+        cursor: pointer;
+      }
+
+      .fpIconsItemTxt {
+        font-size: 12px;
+        color: rgb(44, 44, 44);
+        font-weight: 700;
+        cursor: pointer;
+        border-bottom: 1px solid transparent;
+
+        &:hover {
+          color: blueviolet;
+          border-bottom: 1px solid blueviolet;
+          transition: all 0.3s ease;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .feedPost {
+    .allCommentWrapper {
+      z-index: 99;
+      left: 100px;
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .feedPost {
+    .fpRow1 {
+      .fpProfilePic {
+        height: 80px;
+        width: 80px;
+      }
+      .fpProfileInfoColumn {
+        .fpUsername {
+          font-size: 26px;
+        }
+        .fpProfession {
+          font-size: 22px;
+        }
+        .fpTime {
+          font-size: 18px;
+        }
+      }
+    }
+    .fpDesc {
+      font-size: 28px;
+    }
+
+    .fpIconsRow {
+      .fpLikeDislikeIconWrapper {
+        .fpIconsItemColumn {
+          .fpIconsItemIcon {
+            font-size: 40px;
+          }
+          .fpIconsItemTxt {
+            font-size: 20px;
+          }
+        }
+        .whLiked {
+          font-size: 20px;
+        }
+      }
+      .fpIconsItemColumn {
+        .fpIconsItemIcon {
+          font-size: 40px;
+        }
+        .fpIconsItemTxt {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .feedPost {
+    .allCommentWrapper {
+      margin-right: 700px;
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .feedPost {
+    .fpRow1 {
+      .fpProfilePic {
+        height: 100px;
+        width: 100px;
+      }
+      .fpProfileInfoColumn {
+        .fpUsername {
+          font-size: 34px;
+        }
+        .fpProfession {
+          font-size: 26px;
+        }
+        .fpTime {
+          font-size: 22px;
+        }
+      }
+    }
+    .fpDesc {
+      font-size: 34px;
+    }
+
+    .fpIconsRow {
+      .fpLikeDislikeIconWrapper {
+        .fpIconsItemColumn {
+          .fpIconsItemIcon {
+            font-size: 52px;
+          }
+          .fpIconsItemTxt {
+            font-size: 26px;
+          }
+        }
+        .whLiked {
+          font-size: 26px;
+        }
+      }
+      .fpIconsItemColumn {
+        .fpIconsItemIcon {
+          font-size: 52px;
+        }
+        .fpIconsItemTxt {
+          font-size: 26px;
+        }
+      }
+    }
+  }
+}

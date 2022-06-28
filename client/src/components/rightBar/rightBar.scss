@@ -1,0 +1,12 @@
+.rightBarComponent {
+  overflow-y: scroll;
+  position: fixed;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  .helper {
+    margin-bottom: 100px;
+  }
+}

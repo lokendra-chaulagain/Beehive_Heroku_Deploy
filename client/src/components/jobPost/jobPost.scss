@@ -1,0 +1,192 @@
+.jobPost {
+  margin: 10px 15px;
+  padding: 20px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.33);
+  -webkit-box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.33);
+  -moz-box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.33);
+  // width: 200px;
+
+  .jobCompanyLogo {
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    border: 1px solid grey;
+    object-fit: cover;
+    overflow: hidden;
+  }
+
+  .jpInfoCon {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    width: 405px;
+    // background-color: red;
+
+    .jpJobTitle {
+      font-size: 26px;
+      font-weight: 700;
+      color: rgb(56, 56, 56);
+    }
+
+    .jpPostTime {
+      font-size: 12px;
+      font-weight: 600;
+      margin-top: 10px;
+    }
+
+    .jpCompanyAddress {
+      font-size: 14px;
+      font-weight: 600;
+      color: rgb(43, 42, 42);
+      margin-top: 10px;
+    }
+
+    .jpCompanyName {
+      color: blueviolet;
+      font-size: 18px;
+      font-weight: 600;
+      margin-top: 10px;
+    }
+
+    .jobPostDeleteSaveCon {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 20px;
+      align-items: center;
+
+      .jpDelete {
+        width: 100px;
+        height: 35px;
+        border-radius: 20px;
+        border: none;
+        outline: none;
+        font-size: 14px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border: 1px solid blueviolet;
+
+        &:hover {
+          background-color: blueviolet;
+          color: white;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+      .viewMore {
+        font-size: 14px;
+        font-weight: 700;
+        color: blueviolet;
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: underline blueviolet 1px;
+        }
+      }
+    }
+  }
+
+  .jpHr {
+    width: 0.5px;
+    height: 100px;
+    background-color: grey;
+    margin-right: 30px;
+  }
+
+  .fullTimeBut {
+    width: 100px;
+    height: 38px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: blueviolet;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .jobPost {
+    width: 500px;
+    .jpHr {
+      display: none;
+    }
+    .fullTimeBut {
+      position: absolute;
+      margin-top: 122px;
+    }
+  }
+}
+
+@media only screen and (max-width: 565px) {
+  .jobPost {
+    width: 440px;
+
+    .fullTimeBut {
+      left: 20px;
+    }
+  }
+}
+
+@media only screen and (max-width: 510px) {
+  .jobPost {
+    width: 400px;
+
+    .jpInfoCon {
+      .jobPostDeleteSaveCon {
+        gap: 10px;
+      }
+    }
+
+    .fullTimeBut {
+      left: 20px;
+    }
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .jobPost {
+    width: 350px;
+
+    .jpInfoCon {
+      .jobPostDeleteSaveCon {
+        gap: 10px;
+        margin-left: -100px;
+      }
+    }
+
+    .fullTimeBut {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .jobPost {
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 365px) {
+  .jobPost {
+    width: 260px;
+    margin-left: 10px !important;
+
+    .jpInfoCon {
+      .jobPostDeleteSaveCon {
+        gap: 5px;
+        margin-left: -105px;
+      }
+    }
+  }
+}

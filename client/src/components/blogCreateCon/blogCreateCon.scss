@@ -1,0 +1,211 @@
+.blogCreateContainer {
+  padding: 0px 16px;
+  flex: 3;
+  display: flex;
+
+  .bccWholeContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .bccSpanError {
+      background-color: red;
+      width: 350px;
+      padding: 10px;
+      color: rgb(228, 226, 226);
+      font-size: 18px;
+      font-weight: 600;
+      border-radius: 5px;
+      position: sticky;
+      top: 72px;
+      display: flex;
+      align-self: end;
+      z-index: 99;
+      margin-right: 2px;
+    }
+
+    .bccSpanSuccess {
+      background-color: green;
+      width: 310px;
+      padding: 10px;
+      color: rgb(228, 226, 226);
+      font-size: 18px;
+      font-weight: 600;
+      border-radius: 5px;
+      position: sticky;
+      top: 72px;
+      display: flex;
+      align-self: end;
+      z-index: 99;
+      margin-right: 2px;
+    }
+
+    .bccSpanError2 {
+      background-color: red;
+      width: 200px;
+      padding: 10px;
+      color: rgb(228, 226, 226);
+      font-size: 18px;
+      font-weight: 600;
+      border-radius: 5px;
+      position: sticky;
+      top: 72px;
+      display: flex;
+      align-self: end;
+      z-index: 99;
+      margin-right: 2px;
+    }
+
+
+    .bccTitle {
+      font-size: 28px;
+      font-weight: 700;
+      color: rgb(38, 38, 38);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    .bccHr {
+      border: 1px solid blueviolet;
+      margin-top: 8px;
+      background-color: blueviolet;
+    }
+    .bccImg {
+      width: 100%;
+      height: 320px;
+      margin-top: 40px;
+      border: 1px solid blueviolet;
+      border-radius: 20px;
+      object-fit: cover;
+      overflow: hidden;
+    }
+
+    .bccImgIconAndTxt {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+
+      .bccImgIcon {
+        font-size: 50px;
+        cursor: pointer;
+        color: blueviolet;
+      }
+      .bccStar {
+        color: red;
+        font-size: 22px;
+      }
+
+      .bccSelectImgTxt {
+        font-size: 16px;
+        font-weight: 700;
+        margin-left: 5px;
+      }
+    }
+
+    .bccColumnCon {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .bccStar {
+        color: red;
+        font-size: 22px;
+      }
+
+      .bccBlogTitle1 {
+        font-size: 16px;
+        font-weight: 800;
+        color: rgb(75, 74, 74);
+        margin-top: 20px;
+      }
+
+      .bccBlogTitleInput1 {
+        height: 40px;
+        border-radius: 8px;
+        border: none;
+        border: 1px solid rgb(159, 158, 158);
+        margin-top: 5px;
+        padding-left: 5px;
+        font-size: 18px;
+      }
+      .bccbt1 {
+        height: 70px;
+      }
+
+      .bccBlogDescInput {
+        max-width: 730px;
+        max-height: 500px;
+        min-height: 200px;
+        margin-top: 5px;
+        border: 1px solid grey;
+      }
+
+      .bccSubmmitBut {
+        height: 40px;
+        width: 100px;
+        border-radius: 8px;
+        margin-top: 22px;
+        border: none;
+        outline: none;
+        border: 1px solid rgb(159, 158, 158);
+        color: white;
+        background-color: blueviolet;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 17px;
+        cursor: pointer;
+        margin-left: 86%;
+        margin-bottom: 200px;
+
+        &:hover {
+          background-color: white;
+          color: blueviolet;
+          border: 2px solid blueviolet;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .blogCreateContainer {
+    .bccWholeContainer {
+      .bccColumnCon {
+        .bccSubmmitBut {
+          margin-left: 70%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .blogCreateContainer {
+    .bccWholeContainer {
+      .bccImg {
+        height: 280px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .blogCreateContainer {
+    .bccWholeContainer {
+      .bccImg {
+        height: 210px;
+      }
+      .bccColumnCon {
+        .bccSubmmitBut {
+          margin-left: 40%;
+        }
+      }
+    }
+  }
+}

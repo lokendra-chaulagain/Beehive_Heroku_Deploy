@@ -1,0 +1,75 @@
+.jobSearchPage {
+  margin-top: 60px;
+  overflow-x: hidden;
+
+  .jspWrapper {
+    .jspBeforeSplit {
+      display: flex;
+
+      .jspLeftCon {
+        flex: 1.1;
+        overflow-y: scroll;
+        height: 200vh;
+        display: flex;
+        justify-content: end;
+      }
+
+      .jspCenterCon {
+        flex: 2.5;
+      }
+
+      .jspRightCon {
+        flex: 1.4;
+        background-color: rgb(234, 231, 238);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1370px) {
+  .jspCenterCon {
+    min-width: 630px;
+  }
+}
+
+@media only screen and (max-width: 1250px) {
+  .jspCenterCon {
+    padding-right: 50px;
+  }
+  .jspRightCon {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .jobSearchPage {
+    .jspWrapper {
+      .jspBeforeSplit {
+        .jspLeftCon {
+          display: none;
+        }
+        .jspCenterCon {
+          padding-left: 100px;
+          padding-right: 100px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .jobSearchPage {
+    .jspWrapper {
+      .jspBeforeSplit {
+        .jspCenterCon {
+          margin-left: -100px;
+          margin-right: -100px;
+        }
+      }
+    }
+  }
+}
+
+
+
+

@@ -1,0 +1,223 @@
+.bookmarkJobpost {
+  overflow-x: hidden;
+  margin: 10px 15px;
+  padding: 20px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.33);
+  -webkit-box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.33);
+  -moz-box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.33);
+
+  .bjpjobCompanyLogo {
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    border: 1px solid grey;
+    object-fit: cover;
+    overflow: hidden;
+  }
+
+  .bjpInfoCon {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    width: 405px;
+
+    .bjpJobTitle {
+      font-size: 26px;
+      font-weight: 700;
+      color: rgb(56, 56, 56);
+    }
+
+    .bjpPostTime {
+      font-size: 12px;
+      font-weight: 600;
+      margin-top: 10px;
+    }
+
+    .bjpCompanyAddress {
+      font-size: 14px;
+      font-weight: 600;
+      color: rgb(43, 42, 42);
+      margin-top: 10px;
+    }
+
+    .bjpCompanyName {
+      color: blueviolet;
+      font-size: 18px;
+      font-weight: 600;
+      margin-top: 10px;
+    }
+
+    .bjpjobPostDeleteSaveCon {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 20px;
+      align-items: center;
+
+      .bjpDelete {
+        width: 100px;
+        height: 35px;
+        border-radius: 20px;
+        border: none;
+        outline: none;
+        font-size: 14px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border: 1px solid blueviolet;
+
+        &:hover {
+          background-color: blueviolet;
+          color: white;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+      .bjpviewMore {
+        font-size: 14px;
+        font-weight: 700;
+        color: blueviolet;
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: underline blueviolet 1px;
+        }
+      }
+    }
+  }
+
+  .bjpHr {
+    width: 0.5px;
+    height: 100px;
+    background-color: grey;
+    margin-right: 30px;
+  }
+
+  .bjpfullTimeBut {
+    width: 100px;
+    height: 38px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: blueviolet;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .bookmarkJobpost {
+    .bjpjobCompanyLogo {
+      margin-left: -15px;
+
+      width: 100px;
+      height: 100px;
+    }
+    .bjpInfoCon {
+      .bjpJobTitle {
+        font-size: 32px;
+      }
+      .bjpPostTime {
+        font-size: 18px;
+      }
+      .bjpCompanyAddress {
+        font-size: 22px;
+      }
+      .bjpCompanyName {
+        font-size: 24px;
+      }
+      .bjpjobPostDeleteSaveCon {
+        margin-left: -300px;
+        .bjpDelete {
+          width: 100px;
+          height: 45px;
+          font-size: 21px;
+        }
+        .bjpviewMore {
+          font-size: 18px;
+        }
+      }
+    }
+    .bjpHr {
+      display: none;
+    }
+    .bjpfullTimeBut {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .bookmarkJobpost {
+    .bjpjobCompanyLogo {
+      width: 120px;
+      height: 120px;
+    }
+    .bjpInfoCon {
+      .bjpJobTitle {
+        font-size: 38px;
+      }
+      .bjpPostTime {
+        font-size: 22px;
+      }
+      .bjpCompanyAddress {
+        font-size: 26px;
+      }
+      .bjpCompanyName {
+        font-size: 30px;
+      }
+      .bjpjobPostDeleteSaveCon {
+        .bjpDelete {
+          width: 120px;
+          height: 52px;
+          font-size: 26px;
+        }
+        .bjpviewMore {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .bookmarkJobpost {
+    .bjpjobCompanyLogo {
+      width: 120px; //
+      height: 120px; //
+    }
+    .bjpInfoCon {
+      .bjpJobTitle {
+        font-size: 45px;
+      }
+      .bjpPostTime {
+        font-size: 26px;
+      }
+      .bjpCompanyAddress {
+        font-size: 33px;
+      }
+      .bjpCompanyName {
+        font-size: 35px;
+      }
+      .bjpjobPostDeleteSaveCon {
+        .bjpDelete {
+          width: 150px;
+          height: 62px;
+          font-size: 32px;
+        }
+        .bjpviewMore {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+}

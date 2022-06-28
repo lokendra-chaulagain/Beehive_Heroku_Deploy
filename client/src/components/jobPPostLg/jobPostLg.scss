@@ -1,0 +1,209 @@
+.jobPostLgCon {
+  margin: 10px 15px;
+  padding: 20px 30px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.33);
+  -webkit-box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.33);
+  -moz-box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.33);
+
+  .jplTitle {
+    font-size: 28px;
+    font-weight: 700;
+    color: rgb(46, 46, 46);
+  }
+
+  .jplCompanyIconName {
+    display: flex;
+  }
+  .jplImg {
+    height: 50px;
+    width: 55px;
+    object-fit: cover;
+  }
+
+  .jplCompanyNameCon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 14px;
+  }
+
+  .dayAgoApplication {
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 10px;
+
+    .jplApplicantsNum {
+      margin-left: 8px;
+      color: blueviolet;
+      font-weight: 700;
+    }
+  }
+
+  .jplIconAndTxt {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+
+    .jplIcon {
+      font-size: 20px;
+      color: rgb(96, 96, 96);
+    }
+
+    .jplTxt {
+      margin-left: 10px;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .jplTxt2 {
+      margin-left: 8px;
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
+
+  .jplRecruiticonTxt {
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+
+    .jplHiringIcon {
+      font-size: 20px;
+      color: rgb(79, 7, 146);
+    }
+    .activelyRecruitTxt {
+      margin-left: 10px;
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
+
+  .jplApplySaveBut {
+    display: flex;
+    margin-top: 20px;
+
+    .jplApplyBtn {
+      height: 40px;
+      width: 140px;
+      background-color: blueviolet;
+      border: none;
+      outline: none;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+
+      &:hover {
+        background-color: white;
+        color: blueviolet;
+        border: 2px solid blueviolet;
+        transition: all 0.3s ease-in;
+      }
+
+      .jplButIcon {
+        margin-left: 20px;
+        font-size: 18px;
+      }
+    }
+
+    .jplSaveBtn {
+      height: 40px;
+      width: 140px;
+      background-color: white;
+      border: none;
+      outline: none;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: blueviolet;
+      font-size: 16px;
+      font-weight: 700;
+      border: 1px solid blueviolet;
+      margin-left: 5px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      &:hover {
+        color: blueviolet;
+        border: 2px solid blueviolet;
+        transition: all 0.1s ease-in;
+      }
+    }
+
+    .editBut {
+      height: 32px;
+      width: 80px;
+      background-color: white;
+      border: none;
+      outline: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: blueviolet;
+      font-size: 16px;
+      font-weight: 700;
+      border: 1px solid grey;
+      border-radius: 3px;
+      margin-left: 300px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      &:hover {
+        color: blueviolet;
+        border: 2px solid blueviolet;
+        transition: all 0.1s ease-in;
+      }
+    }
+  }
+
+  // hr----------
+  .jplHr {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: 0.2px;
+    background-color: blueviolet;
+  }
+
+  .jobDescCon {
+    display: flex;
+    flex-direction: column;
+
+    .jobDescriptionTitleTxt {
+      font-size: 22px;
+      font-weight: 700;
+      color: rgb(63, 63, 63);
+    }
+    .aboutTheJob {
+      font-size: 18px;
+      font-weight: 700;
+      color: rgb(52, 52, 52);
+      margin-top: 8px;
+    }
+
+    .jobDesc {
+      font-size: 16px;
+      font-weight: 600;
+      color: rgb(70, 69, 69);
+      margin-top: 8px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .requirementsUl {
+    margin-left: 34px;
+    margin-bottom: 50px;
+  }
+}

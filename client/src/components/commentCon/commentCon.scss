@@ -1,0 +1,122 @@
+.commentContainer {
+  background-color: white;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  position: absolute;
+  margin-top: -10px;
+  height: 75px;
+  width: 47.8%;
+
+  .commentInput {
+    height: 100%;
+    border: none;
+    outline: none;
+    padding-left: 8px;
+    padding-right: 8px;
+    width: 85%;
+  }
+  .clearSendIcon {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .commentSendIcon {
+      cursor: pointer;
+      background-color: blueviolet;
+      color: white;
+      border-radius: 50%;
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
+      -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
+    }
+  }
+}
+
+@media only screen and (max-width: 1240px) {
+  .commentContainer {
+    width: 64%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .commentContainer {
+    width: 95.5%;
+  }
+}
+
+@media only screen and (max-width: 740px) {
+  .commentContainer {
+    margin-top: -20px;
+    height: 85px;
+    z-index: 99;
+    width: 98%;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .commentContainer {
+    margin-top: -20px;
+    height: 85px;
+    z-index: 99;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .commentContainer {
+    margin-top: 10px;
+    height: 85px;
+    z-index: 99;
+    width: 104%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .commentContainer {
+    margin-top: 10px;
+    height: 85px;
+    z-index: 99;
+    width: 118%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .commentContainer {
+    margin-top: 10px;
+    height: 85px;
+    z-index: 99;
+    width: 150%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .commentContainer {
+    margin-top: 10px;
+    height: 110px;
+    z-index: 99;
+    width: 180%;
+  }
+}
+
+// @media only screen and (max-width: 600px) {
+//   .commentContainer {
+//     height: 100px;
+//     width: 600px;
+
+//     .commentInput {
+//       font-size: 32px;
+//     }
+//     .clearSendIcon {
+//       .commentSendIcon {
+//         font-size: 45px;
+//       }
+//     }
+//   }
+// }

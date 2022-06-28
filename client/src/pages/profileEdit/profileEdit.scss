@@ -1,0 +1,26 @@
+.profileEditPage {
+  margin-top: 60px;
+
+  .pepWrapper {
+    .pepBeforeSplit {
+      display: flex;
+
+      .pepLeftCon {
+        flex: 1.1;
+        overflow-y: scroll;
+        height: 200vh;
+        display: flex;
+        justify-content: end;
+      }
+
+      .pepCenterCon {
+        flex: 2.5;
+      }
+
+      .pepRightCon {
+        flex: 1.4;
+        background-color: rgb(234, 231, 238);
+      }
+    }
+  }
+}

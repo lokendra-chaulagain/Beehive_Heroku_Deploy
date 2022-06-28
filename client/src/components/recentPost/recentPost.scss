@@ -1,0 +1,47 @@
+.recentPost {
+  background-color: #f8f3fd;
+  padding: 26px 15px;
+  margin: 0px 20px;
+  border-radius: 20px;
+  width: 310px;
+  margin-right: 120px;
+
+  .rpTitle {
+    font-size: 20px;
+    font-weight: 700;
+    color: rgb(50, 50, 50);
+  }
+  .rpHr {
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border-top: 4px solid blueviolet;
+  }
+  .rpList {
+    display: flex;
+    margin-bottom: 5px;
+
+    .rpListKey {
+      font-size: 18px;
+      color: rgb(50, 50, 50);
+      margin-bottom: 36px;
+    }
+    .rpListValue {
+      font-size: 16px;
+      color: rgb(50, 50, 50);
+      margin-left: 8px;
+      cursor: pointer;
+
+      &:hover {
+        color: rgb(104, 11, 192);
+        text-decoration: underline blueviolet 2px;
+        transition: all 0.8s ease;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1320px) {
+  .recentPost {
+    width: 280px;
+  }
+}

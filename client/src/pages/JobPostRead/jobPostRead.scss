@@ -1,0 +1,51 @@
+.jobPostReadPage {
+  margin-top: 60px;
+
+  .jprWrapper {
+    .jprBeforeSplit {
+      display: flex;
+
+      .jprLeftCon {
+        flex: 1.1;
+        overflow-y: scroll;
+        height: 200vh;
+        display: flex;
+        justify-content: end;
+      }
+
+      .jprCenterCon {
+        flex: 2.5;
+      }
+
+      .jprRightCon {
+        flex: 1.4;
+        background-color: rgb(234, 231, 238);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  .jobPostReadPage {
+    .jprBeforeSplit {
+      .jprRightCon {
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .jobPostReadPage {
+    .jprWrapper {
+      .jprBeforeSplit {
+        .jprLeftCon {
+          display: none;
+        }
+        .jprCenterCon{
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}

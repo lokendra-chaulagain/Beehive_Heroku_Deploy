@@ -1,0 +1,24 @@
+.hobbyContainer {
+    margin-right: 10px;
+    width: 100px;
+    height: 32px;
+    border: 1px solid grey;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .hcList {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .hcIcon {
+            margin-right: 6px;
+            font-size: 20px;
+        }
+        .hcTxt {
+            font-weight: 500;
+        }
+    }
+}

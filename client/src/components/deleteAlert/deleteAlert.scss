@@ -1,0 +1,47 @@
+.deleteAlertContainer {
+  height: 82px;
+  width: 190px;
+  background-color: rgb(221, 217, 217);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 14px;
+  box-shadow: 0px 0px 3px -1px rgba(0, 0, 0, 0.74);
+  -webkit-box-shadow: 0px 0px 3px -1px rgba(0, 0, 0, 0.74);
+  -moz-box-shadow: 0px 0px 3px -1px rgba(0, 0, 0, 0.74);
+  z-index: 100;
+  position: absolute;
+  margin-bottom: 30px;
+  margin-left: 155px;
+
+  
+
+  .areYouSure {
+    font-size: 19px;
+    font-weight: 600;
+  }
+
+  .dacButton {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 20px;
+
+    .dacYes {
+      border: none;
+      outline: none;
+      height: 32px;
+      width: 80px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 600;
+
+      &:hover {
+        background-color: blueviolet;
+        color: white;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+}

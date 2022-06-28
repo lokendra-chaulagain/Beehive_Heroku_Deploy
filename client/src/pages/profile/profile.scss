@@ -1,0 +1,153 @@
+.profilePage {
+  .ppWrapper {
+    padding: 0px 125px;
+
+    .upCoverPicCon {
+      display: flex;
+      padding-right: 4px;
+      margin-bottom: 100px;
+
+      .upCoverPic {
+        height: 40vh;
+        object-fit: cover;
+        overflow: hidden;
+        width: 100%;
+        margin-top: 67px;
+      }
+      .upProfilePic {
+        height: 220px;
+        object-fit: cover;
+        overflow: hidden;
+        width: 220px;
+        border: 1px solid blueviolet;
+        border-radius: 15px;
+        position: absolute;
+        top: 25vh;
+        left: 70%;
+        z-index: 100;
+      }
+    }
+
+    .pNameProfessionCon {
+      gap: 7px;
+      display: flex;
+      flex-direction: column;
+      margin-left: 400px;
+      align-items: center;
+      margin-top: -80px;
+      margin-bottom: 50px;
+      margin-left: -250px;
+      .pName {
+        font-size: 30px;
+        font-weight: 600;
+      }
+      .pProfession {
+        font-size: 22px;
+        font-weight: 500;
+      }
+    }
+
+    .ppBeforeSplit {
+      display: flex;
+
+      .ppLeft {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        .profileSpanTitle{
+        font-size:20px;
+        font-weight: 600;
+        color: blueviolet;
+        display: flex;
+        justify-content: center;
+        }
+
+        .upSmallWhatsOnYourMindCon {
+          height: 80px;
+          background-color: white;
+          box-shadow: 0px 0px 3px -1px rgba(0, 0, 0, 0.75);
+          -webkit-box-shadow: 0px 0px 3px -1px rgba(0, 0, 0, 0.75);
+          -moz-box-shadow: 0px 0px 3px -1px rgba(0, 0, 0, 0.75);
+          margin: 10px 60px;
+          margin-bottom: 30px;
+          border-radius: 6px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .upTinyProfilePic {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 12px;
+            cursor: pointer;
+          }
+
+          .upOnYourMindInput {
+            width: 85%;
+            height: 40px;
+            border-radius: 22px;
+            border: none;
+            outline: none;
+            border: 2px solid blueviolet;
+            cursor: pointer;
+            padding-left: 15px;
+          }
+        }
+        .feedPostCreateConWrapper {
+          display: flex;
+          justify-content: center;
+          position: sticky;
+          margin-top: -110px;
+        }
+      }
+    }
+    .ppRight {
+      flex: 1;
+      box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+      -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+      overflow-y: scroll;
+      position: sticky;
+      top: 65px;
+      height: 90.7vh;
+      border-radius: 5px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1250px) {
+  .profilePage {
+    .ppWrapper {
+      padding: 0px 50px;
+
+      .upProfilePic {
+        margin-left: -80px;
+      }
+    }
+    .ppWrapper {
+      .ppBeforeSplit {
+        .ppLeft {
+          width: 20px !important;
+          // background-color: red;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .ppRight {
+    display: none;
+  }
+}
+
+// @media only screen and (max-width: 950px) {
+//   .profilePage {
+//     .ppWrapper {
+//       .upProfilePic {
+//         margin-left: -180px;
+//       }
+//     }
+//   }
+// }

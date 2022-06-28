@@ -1,0 +1,26 @@
+.jobSearchPage {
+  margin-top: 60px;
+
+  .jspWrapper {
+    .jspBeforeSplit {
+      display: flex;
+
+      .jspLeftCon {
+        flex: 1.1;
+        overflow-y: scroll;
+        height: 200vh;
+        display: flex;
+        justify-content: end;
+      }
+
+      .jspCenterCon {
+        flex: 2.5;
+      }
+
+      .jspRightCon {
+        flex: 1.4;
+        background-color: rgb(234, 231, 238);
+      }
+    }
+  }
+}

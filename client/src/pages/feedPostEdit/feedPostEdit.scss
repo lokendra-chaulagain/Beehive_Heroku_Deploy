@@ -1,0 +1,27 @@
+.feedPostEditPage {
+  margin-top: 60px;
+
+  .fpepWrapper {
+    .fpepBeforeSplit {
+      display: flex;
+
+      .fpepLeftCon {
+        flex: 1.1;
+        overflow-y: scroll;
+        height: 200vh;
+        // background-color: green;
+        display: flex;
+        justify-content: end;
+      }
+
+      .fpepCenterCon {
+        flex: 2.5;
+      }
+
+      .fpepRightCon {
+        flex: 1.4;
+        background-color: rgb(234, 231, 238);
+      }
+    }
+  }
+}

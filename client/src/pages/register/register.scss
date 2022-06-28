@@ -1,0 +1,184 @@
+.registerPage {
+  overflow-y: hidden;
+  height: 100vh;
+  overflow: hidden;
+
+  .rp-Wrapper {
+    display: flex;
+
+    .rp-Left {
+      flex: 1;
+      background-color: #ffff;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+
+      .rp-LeftRow1 {
+        display: flex;
+        align-self: flex-start;
+        margin-top: -25px;
+        margin-left: 35px;
+
+        .rp-logo {
+          height: 150px;
+          width: 150px;
+        }
+      }
+
+      .rp-loginContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 420px;
+        padding-bottom: 20px;
+
+        .rp-logoIcon {
+          height: 60px;
+          width: 60px;
+        }
+        .rp-welcomeTxt {
+          font-size: 30px;
+          margin-top: 5px;
+          font-weight: 700;
+          color: rgb(78, 78, 78);
+        }
+
+        .rp-newHere {
+          font-size: 20px;
+          margin-top: 5px;
+          font-weight: 500;
+          color: rgb(52, 51, 51);
+
+          .newHereSpan {
+            font-size: 20px;
+            margin-top: 5px;
+            font-weight: 600;
+            color: blueviolet;
+          }
+        }
+
+        .rp-loginDesc {
+          font-size: 16px;
+          margin-top: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 5px;
+          color: rgb(59, 59, 59);
+        }
+
+        .rp-loginInputCon {
+          display: flex;
+          width: 320px;
+          height: 42px;
+          background-color: #f0eded;
+          margin-top: 25px;
+          border-radius: 20px;
+          border: 1px solid blueviolet;
+          flex-direction: column;
+
+          .iconAndInputCon {
+            display: flex;
+
+            .rp-inputIconCon {
+              width: 42px;
+              height: 42px;
+              border-radius: 50%;
+              background-color: white;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin-left: 0.8px;
+
+              .rp-Input-icon {
+                font-size: 22px;
+                color: rgb(93, 93, 93);
+              }
+            }
+
+            .rp-Input {
+              width: 267px;
+              height: 100%;
+              border: none;
+              outline: none;
+              padding-left: 10px;
+              background-color: #f0eded;
+              border-radius: 20px;
+            }
+
+            .input-error,
+            .registerInputs {
+              border: none;
+              outline: none;
+              width: 85%;
+              border-radius: 20px;
+              background-color: transparent;
+              margin-left: 1px;
+            }
+          }
+        }
+        .error {
+          color: red;
+          font-size: 14px;
+          margin-left: 5px;
+          margin-top: 1px;
+        }
+        .rp-loginBut {
+          width: 320px;
+          height: 42px;
+          background-color: blueviolet;
+          margin-top: 30px;
+          border-radius: 20px;
+          border: none;
+          outline: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          font-weight: 500;
+          font-size: 14px;
+          cursor: pointer;
+        }
+
+        .rp-loginBut1 {
+          margin-top: 10px;
+        }
+
+        .rp-alreadyAcc {
+          font-size: 14px;
+          margin-top: 12px;
+          color: blueviolet;
+        }
+      }
+    }
+
+    .lpRight {
+      flex: 1;
+      background-color: blueviolet;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: -50px;
+
+      .rpRightCon {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .rprTitle {
+          font-size: 40px;
+          color: white;
+          font-weight: 600;
+        }
+
+        .rprDesc {
+          font-size: 25px;
+          font-weight: 600;
+          color: white;
+        }
+      }
+    }
+  }
+}

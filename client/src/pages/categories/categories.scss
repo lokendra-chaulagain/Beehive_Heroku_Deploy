@@ -1,0 +1,30 @@
+.categoriesPage {
+  margin-top: 60px;
+
+  .cpWrapper {
+    .cpBeforeSplit {
+      display: flex;
+
+      .cpLeftCon {
+        flex: 1.1;
+        overflow-y: scroll;
+        height: 200vh;
+        display: flex;
+        justify-content: end;
+      }
+
+      .cpCenterCon {
+        flex: 2.5;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .cpRightCon {
+        flex: 1.4;
+        background-color: rgb(234, 231, 238);
+      }
+    }
+  }
+}
