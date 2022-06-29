@@ -1,0 +1,5 @@
+//Heroku push
+cd server
+git add .
+git commit -am "my first commit"
+git push heroku master
