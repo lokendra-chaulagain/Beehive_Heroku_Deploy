@@ -30,6 +30,12 @@ app.use("/api/blogs", blogRoute);
 app.use("/api/comments", commentRoute);
 
 
+app.use(express.static(path.join(__dirname, "/client/build")));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '/client/build', 'index.html'));
+});
+
 //Error handling middleware
 app.use((error, req, res, next) => {
   const errorStatus = error.status || 500;
@@ -43,11 +49,7 @@ app.use((error, req, res, next) => {
 });
 
 
-app.use(express.static(path.join(__dirname, "/client/build")));
 
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '/client/build', 'index.html'));
-});
 
 //Port listening
 app.listen(process.env.PORT || 5000, () => {
