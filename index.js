@@ -29,16 +29,6 @@ app.use("/api/userDetails", userDetailRoute);
 app.use("/api/blogs", blogRoute);
 app.use("/api/comments", commentRoute);
 
-//Heroku
-app.use(
-  express.static(path.join(__dirname, "/client/build"))
-);
-
-app.get("*", (req, res) => {
-  res.sendFile(
-    path.join(__dirname, "/client/build", "index.html")
-  );
-});
 
 //Error handling middleware
 app.use((error, req, res, next) => {
@@ -50,6 +40,13 @@ app.use((error, req, res, next) => {
     message: errorMessage,
     stack: error.stack,
   });
+});
+
+
+app.use(express.static(path.join(__dirname, "/client/build")));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '/client/build', 'index.html'));
 });
 
 //Port listening

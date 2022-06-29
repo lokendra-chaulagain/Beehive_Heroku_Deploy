@@ -1,6 +1,7 @@
-const UserDetail = require("../models/userDetail");
+
 const JobPost = require("../models/JobPost");
 const UserPost = require("../models/UserPost");
+const UserDetail = require("../models/UserDetail");
 
 //Create
 const createUserDetail = async (req, res, next) => {
