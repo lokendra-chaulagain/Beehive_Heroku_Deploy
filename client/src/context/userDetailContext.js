@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect, createContext } from "react";
-import axios from "axios";
 import { AuthContext } from "./authContext/AuthContext";
+import { axiosInstance } from "../config";
 
 //context
 const UserDetailContext = createContext();
@@ -13,12 +13,12 @@ export function UserDetailContextProvider({ children }) {
   useEffect(() => {
     const fetchCurrentUserDetail = async () => {
       try {
-        const res = await axios.post("/userDetails/getByUserID", {
+        const res = await axiosInstance.post("/userDetails/getByUserID", {
           userID: user?._id,
         });
         setCurrentUserDetail(res.data[0]);
 
-        const re2 = await axios.get(`/users/get/${user?._id}`);
+        const re2 = await axiosInstance.get(`/users/get/${user?._id}`);
         setUserFromDB(re2.data);
       } catch (error) {
         console.log(error);

@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect, createContext } from "react";
-import axios from "axios";
 import { AuthContext } from "./authContext/AuthContext";
+import { axiosInstance } from "../config";
 
 //context
 const UserAllPostsContext = createContext();
@@ -14,15 +14,15 @@ export function UserAllPostsContextProvider({ children }) {
   useEffect(() => {
     const fetchUserAllPosts = async () => {
       try {
-        const res1 = await axios.post("/blogs/getAllBlogsOfAUser", {
+        const res1 = await axiosInstance.post("/blogs/getAllBlogsOfAUser", {
           userID: user?._id,
         });
 
-        const res = await axios.post("/jobPosts/getAllJobPostsOfAUser", {
+        const res = await axiosInstance.post("/jobPosts/getAllJobPostsOfAUser", {
           userID: user?._id,
         });
 
-        const res2 = await axios.post("/userPosts/getAllPostsOfAUser", {
+        const res2 = await axiosInstance.post("/userPosts/getAllPostsOfAUser", {
           userID: user?._id,
         });
 

@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect, createContext } from "react";
-import axios from "axios";
+import { axiosInstance } from "../config";
 
 //context
 const BlogContext = createContext();
@@ -11,13 +11,13 @@ export function BlogContextProvider({ children }) {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const res = await axios.get("/blogs/getAll");
-        const res1 = await axios.get("/userPosts/getAll");
+        const res = await axiosInstance.get("/blogs/getAll");
+        const res1 = await axiosInstance.get("/userPosts/getAll");
 
-        const blogs = res.data.sort((a, b) => {
+        res.data.sort((a, b) => {
           return new Date(b.createdAt) - new Date(a.createdAt);
         });
-        const posts = res1.data.sort((a, b) => {
+         res1.data.sort((a, b) => {
           return new Date(b.createdAt) - new Date(a.createdAt);
         });
 
