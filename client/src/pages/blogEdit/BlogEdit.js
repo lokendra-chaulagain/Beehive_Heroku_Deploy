@@ -4,8 +4,8 @@ import LeftBar from "../../components/leftBar/LeftBar";
 import RightBar from "../../components/rightBar/RightBar";
 import BlogEditCon from "../../components/blogEditCon/BlogEditCon";
 import { useLocation } from "react-router-dom";
-import axios from "axios";
 import "./blogEdit.scss";
+import { axiosInstance } from "../../config";
 
 function BlogEdit() {
   //Data fetching from URl id
@@ -15,7 +15,7 @@ function BlogEdit() {
   const [blog, setBlog] = React.useState({});
   useEffect(() => {
     const fetchBlogData = async () => {
-      const res = await axios.get(`/blogs/get/${path}`);
+      const res = await axiosInstance.get(`/blogs/get/${path}`);
       setBlog(res.data);
     };
     fetchBlogData();

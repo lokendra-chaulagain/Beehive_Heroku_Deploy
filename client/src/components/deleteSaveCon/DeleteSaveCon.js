@@ -4,11 +4,11 @@ import BookmarkAddedIcon from "@mui/icons-material/BookmarkAdded";
 import ModeEditTwoToneIcon from "@mui/icons-material/ModeEditTwoTone";
 import { Link } from "react-router-dom";
 import "./deleteSaveCon.scss";
-import axios from "axios";
 import { useAPI } from "../../context/userDetailContext";
 import { AuthContext } from "../../context/authContext/AuthContext";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { axiosInstance } from "../../config";
 
 function DeleteSaveCon({ postId }) {
   const { currentUserDetail } = useAPI();
@@ -19,7 +19,7 @@ function DeleteSaveCon({ postId }) {
   const handleDelete = async () => {
     setDeleting(true);
     try {
-      await axios.delete(`/userPosts/delete/${postId}`);
+      await axiosInstance.delete(`/userPosts/delete/${postId}`);
       window.location.reload();
       toast.success("Post deleted successfully", { theme: "colored" });
     } catch (error) {
@@ -32,7 +32,7 @@ function DeleteSaveCon({ postId }) {
   useEffect(() => {
     const getFeedPost = async () => {
       try {
-        const res = await axios.get(`/userPosts/get/${postId}`);
+        const res = await axiosInstance.get(`/userPosts/get/${postId}`);
         setFeedPost(res.data);
       } catch (error) {}
     };
@@ -46,7 +46,7 @@ function DeleteSaveCon({ postId }) {
   const handleBookmark = async () => {
     setSaving(true);
     try {
-      await axios.put(`/userDetails/bookmark/${postId}`, {
+      await axiosInstance.put(`/userDetails/bookmark/${postId}`, {
         userDetailId: currentUserDetail?._id,
       });
       setSaved(true);

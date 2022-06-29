@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ImageSearchOutlinedIcon from "@mui/icons-material/ImageSearchOutlined";
 import { useLocation } from "react-router-dom";
-import axios from "axios";
 import app from "../../firebase";
 import {
   getStorage,
@@ -10,6 +9,7 @@ import {
   getDownloadURL,
 } from "firebase/storage";
 import "./feedPostEditCon.scss";
+import { axiosInstance } from "../../config";
 
 function FeedPostEditCon() {
   const location = useLocation();
@@ -19,7 +19,7 @@ function FeedPostEditCon() {
   const [postData, setPostData] = React.useState({});
   useEffect(() => {
     const fetchPostData = async () => {
-      const res = await axios.get(`/userPosts/get/${path}`);
+      const res = await axiosInstance.get(`/userPosts/get/${path}`);
       setPostData(res.data);
     };
     fetchPostData();
@@ -61,7 +61,7 @@ function FeedPostEditCon() {
         getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
           //new post
           try {
-            axios.put(`/userPosts/update/${path}`, {
+            axiosInstance.put(`/userPosts/update/${path}`, {
               desc: newDesc,
               postImg: downloadURL,
             });

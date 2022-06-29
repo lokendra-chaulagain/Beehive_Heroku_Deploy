@@ -2,10 +2,10 @@ import React, { useContext, useState } from "react";
 import { format } from "timeago.js";
 import "./jobPost.scss";
 import { Link } from "react-router-dom";
-import axios from "axios";
 import DeleteAlert from "../deleteAlert/DeleteAlert";
 import { useAPI } from "../../context/userDetailContext";
 import { AuthContext } from "../../context/authContext/AuthContext";
+import { axiosInstance } from "../../config";
 
 function JobPost({ jobPost, privateJobPost }) {
   const { currentUserDetail } = useAPI();
@@ -15,7 +15,7 @@ function JobPost({ jobPost, privateJobPost }) {
   const [bookmarked, setBookmarked] = useState(false);
   const handleBookmark = async (id) => {
     try {
-      await axios.put(`/userDetails/bookmark/${id}`, {
+      await axiosInstance.put(`/userDetails/bookmark/${id}`, {
         userDetailId: currentUserDetail?._id,
       });
       setBookmarked(true);

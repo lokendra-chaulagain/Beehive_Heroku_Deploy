@@ -13,9 +13,8 @@ import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import Hobby from "../hobby/Hobby";
 import { AuthContext } from "../../context/authContext/AuthContext";
 import UserInfoEdit from "../userInfoEdit/UserInfoEdit";
-import axios from "axios";
-import { useAPI } from "../../context/userDetailContext";
 import {useLocation} from "react-router-dom";
+import { axiosInstance } from "../../config";
 
 function UserInfo() {
   const { user } = useContext(AuthContext);
@@ -31,7 +30,7 @@ function UserInfo() {
   useEffect(() => {
     const userDetailsOny = async () => {
       try {
-        const res = await axios.post("/userDetails/get", {
+        const res = await axiosInstance.post("/userDetails/get", {
           userID: user._id,
         });
         setCurrentUser(res.data[0]);

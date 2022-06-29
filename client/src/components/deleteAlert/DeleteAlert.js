@@ -1,12 +1,13 @@
-import axios from "axios";
+
 import React from "react";
+import { axiosInstance } from "../../config";
 import "./deleteAlert.scss";
 
 function DeleteAlert({ setShowDeleteAlert, id }) {
   //Delete jobPost
   const handleDelete = async () => {
     try {
-      await axios.delete(`/jobPosts/delete/${id}`);
+      await axiosInstance.delete(`/jobPosts/delete/${id}`);
       window.location.reload();
     } catch (error) {
       console.log(error);

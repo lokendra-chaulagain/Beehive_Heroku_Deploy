@@ -16,7 +16,7 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { AuthContext } from "../../context/authContext/AuthContext";
-import axios from "axios";
+import { axiosInstance } from "../../config";
 
 function UserInfoEdit() {
     const { user } = useContext(AuthContext);
@@ -30,7 +30,7 @@ function UserInfoEdit() {
     const handleInfoSave = (e) => {
         e.preventDefault();
         try {
-            const res = axios.put(`/users/update/${user._id}`, {
+            const res = axiosInstance.put(`/users/update/${user._id}`, {
                 currentJobAt,
             });
 
@@ -46,7 +46,7 @@ function UserInfoEdit() {
     useEffect(() => {
         const getUserrData = async () => {
             try {
-                const res = await axios.get(`/users/get/${user._id}`);
+                const res = await axiosInstance.get(`/users/get/${user._id}`);
                 setak(res.data);
                 console.log(res.data);
             } catch (error) {

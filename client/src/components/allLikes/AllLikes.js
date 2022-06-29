@@ -2,7 +2,7 @@ import React from "react";
 import ClearIcon from "@mui/icons-material/Clear";
 import { Link } from "react-router-dom";
 import "./allLikes.scss";
-import axios from "axios";
+import { axiosInstance } from "../../config";
 
 function AllLikes({ setOpenLikesCon, peopleKoId }) {
   console.log(peopleKoId);
@@ -11,7 +11,7 @@ function AllLikes({ setOpenLikesCon, peopleKoId }) {
   const [userInfo, setUserInfo] = React.useState([{}]);
   React.useEffect(() => {
     const fetchUserInfo = async () => {
-      const res = await axios.post("/userDetails/getByUserID", {
+      const res = await axiosInstance.post("/userDetails/getByUserID", {
         userID: peopleKoId,
       });
       setUserInfo(res.data);
@@ -38,8 +38,6 @@ function AllLikes({ setOpenLikesCon, peopleKoId }) {
               {user.fullName}
             </span>
           </Link>
-
-          {/* <hr className="acHr" /> */}
         </div>
       ))}
     </>

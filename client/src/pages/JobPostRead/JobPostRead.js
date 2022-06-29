@@ -5,7 +5,7 @@ import "./jobPostRead.scss";
 import RightBar from "../../components/rightBar/RightBar";
 import JobPostLg from "../../components/jobPPostLg/JobPostLg";
 import { useLocation } from "react-router-dom";
-import axios from "axios";
+import { axiosInstance } from "../../config";
 
 function JobPostRead() {
   //Fetching JobPost data from URL id
@@ -15,7 +15,7 @@ function JobPostRead() {
   const [jobPost, setJobPost] = useState({});
   useEffect(() => {
     const fetchJobPost = async () => {
-      const res = await axios.get(`/jobPosts/get/${path}`);
+      const res = await axiosInstance.get(`/jobPosts/get/${path}`);
       console.log(res.data);
       setJobPost(res.data);
     };

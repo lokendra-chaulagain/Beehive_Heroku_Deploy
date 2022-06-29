@@ -4,7 +4,6 @@ import MailOutlinedIcon from "@mui/icons-material/MailOutlined";
 import { AuthContext } from "../../context/authContext/AuthContext";
 import React, { useContext } from "react";
 import { registerSchema } from "./formValidationSchema";
-import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import "./register.scss";
 import { toast } from "react-toastify";

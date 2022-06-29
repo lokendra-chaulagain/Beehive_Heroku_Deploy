@@ -11,8 +11,8 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import SchoolIcon from "@mui/icons-material/School";
 import { Link, useLocation } from "react-router-dom";
 import "./profileRightBar.scss";
-import axios from "axios";
 import { AuthContext } from "../../context/authContext/AuthContext";
+import { axiosInstance } from "../../config";
 
 function ProfileRightBar() {
   const location = useLocation();
@@ -25,7 +25,7 @@ function ProfileRightBar() {
   useEffect(() => {
     const userDetailsOny = async () => {
       try {
-        const res = await axios.post("/userDetails/getByUserID", {
+        const res = await axiosInstance.post("/userDetails/getByUserID", {
           userID: path,
         });
         setViewUserDetail(res.data[0]);

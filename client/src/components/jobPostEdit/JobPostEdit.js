@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import ImageSearchOutlinedIcon from "@mui/icons-material/ImageSearchOutlined";
 import { useLocation, useNavigate } from "react-router-dom";
-import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./jobPostEdit.scss";
+import { axiosInstance } from "../../config";
 
 function JobPostEdit() {
   //Fetching data from URL id
@@ -18,7 +18,7 @@ function JobPostEdit() {
   const [jobPost, setJobPost] = React.useState({});
   useEffect(() => {
     const fetchData = async () => {
-      const res = await axios.get(`/jobPosts/get/${path}`);
+      const res = await axiosInstance.get(`/jobPosts/get/${path}`);
       setJobPost(res.data);
     };
     fetchData();
@@ -73,7 +73,7 @@ function JobPostEdit() {
     };
     console.log(newJob);
     try {
-      await axios.put(`/jobPosts/update/${path}`, newJob);
+      await axiosInstance.put(`/jobPosts/update/${path}`, newJob);
       window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
       setTimeout(function () {
         window.location.reload();

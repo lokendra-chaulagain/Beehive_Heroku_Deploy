@@ -2,9 +2,9 @@ import React, { useContext, useState } from "react";
 import SendIcon from "@mui/icons-material/Send";
 import ClearIcon from "@mui/icons-material/Clear";
 import "./commentCon.scss";
-import axios from "axios";
 import { AuthContext } from "../../context/authContext/AuthContext";
 import { useAPI } from "../../context/userDetailContext";
+import { axiosInstance } from "../../config";
 
 function CommentCon({ setShowCommentCon, id }) {
   console.log(id);
@@ -24,7 +24,7 @@ function CommentCon({ setShowCommentCon, id }) {
 
   const handleComment = async () => {
     try {
-      await axios.post("/comments/create", newComment);
+      await axiosInstance.post("/comments/create", newComment);
       window.location.reload();
     } catch (error) {
       console.log(error);

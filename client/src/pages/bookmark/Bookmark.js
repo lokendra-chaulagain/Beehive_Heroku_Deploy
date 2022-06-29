@@ -5,7 +5,7 @@ import "./bookmark.scss";
 import RightBar from "../../components/rightBar/RightBar";
 import { useAPI } from "../../context/userDetailContext";
 import BookmarkJobpost from "../../components/bookmarkJobpost/BookmarkJobpost";
-import axios from "axios";
+import { axiosInstance } from "../../config";
 
 function Bookmark() {
   //currentUserDetail
@@ -16,7 +16,7 @@ function Bookmark() {
   useEffect(() => {
     const fetchAllJobPostBookmarkIds = async () => {
       try {
-        const res = await axios.get(
+        const res = await axiosInstance.get(
           `/userDetails/getAllBookmarks/${currentUserDetail._id}`
         );
         setBookmarkJobpostIds(res.data);

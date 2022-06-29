@@ -4,7 +4,6 @@ import LeftBar from "../../components/leftBar/LeftBar";
 import ImageSearchOutlinedIcon from "@mui/icons-material/ImageSearchOutlined";
 import RightBar from "../../components/rightBar/RightBar";
 import { AuthContext } from "../../context/authContext/AuthContext";
-import axios from "axios";
 import "./jobPostCreate.scss";
 import {
   getStorage,
@@ -15,6 +14,7 @@ import {
 import app from "../../firebase";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { axiosInstance } from "../../config";
 
 function JobSearchFeed() {
   const { user } = useContext(AuthContext);
@@ -76,7 +76,7 @@ function JobSearchFeed() {
       () => {
         getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
           try {
-            axios.post("jobPosts/create", {
+            axiosInstance.post("jobPosts/create", {
               userID: user._id,
               position,
               companyName,

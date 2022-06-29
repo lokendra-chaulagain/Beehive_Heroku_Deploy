@@ -9,7 +9,7 @@ import CommentCon from "../commentCon/CommentCon";
 import AllComments from "../allComments/AllComments";
 import { format } from "timeago.js";
 import "./feedPost.scss";
-import axios from "axios";
+import { axiosInstance } from "../../config";
 
 function FeedPost({ post, privatePost }) {
   const { user } = useContext(AuthContext);
@@ -21,7 +21,7 @@ function FeedPost({ post, privatePost }) {
   const [postLiked, setPostLiked] = useState(false);
   const handleLike = async (id) => {
     try {
-      const res = await axios.put(`/userPosts/like/${id}`, {
+      const res = await axiosInstance.put(`/userPosts/like/${id}`, {
         userId: user._id,
       });
       setPostLiked(true);
@@ -36,7 +36,7 @@ function FeedPost({ post, privatePost }) {
   const [liked, setLiked] = useState(false);
   const handleLikeDislike = async (id) => {
     try {
-      const res = await axios.put(`/userPosts/like/${id}`, {
+      const res = await axiosInstance.put(`/userPosts/like/${id}`, {
         userId: user?._id,
       });
       setLiked(true);
@@ -51,7 +51,7 @@ function FeedPost({ post, privatePost }) {
   const [comments, setComments] = useState([{}]);
   useEffect(() => {
     const fetchComments = async () => {
-      const res = await axios.post("/comments/getComments", {
+      const res = await axiosInstance.post("/comments/getComments", {
         postID: post?._id,
       });
       setComments(res.data);
@@ -63,7 +63,7 @@ function FeedPost({ post, privatePost }) {
   const [privateComments, setPrivateComments] = useState([{}]);
   useEffect(() => {
     const fetchPrivateComments = async () => {
-      const res = await axios.post("/comments/getComments", {
+      const res = await axiosInstance.post("/comments/getComments", {
         postID: privatePost?._id,
       });
       setPrivateComments(res.data);

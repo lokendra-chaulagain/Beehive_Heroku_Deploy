@@ -4,10 +4,10 @@ import Navbar from "../../components/navbar/Navbar";
 import FeedPost from "../../components/feedPost/FeedPost";
 import ProfileRightBar from "../../components/profileRightBar/ProfileRightBar";
 import { useLocation } from "react-router-dom";
-import axios from "axios";
 import "./profile.scss";
 import JobPost from "../../components/jobPost/JobPost";
 import Blog from "../../components/blog/Blog";
+import { axiosInstance } from "../../config";
 
 function Profile() {
   const location = useLocation();
@@ -17,7 +17,7 @@ function Profile() {
   const [userDetail, setUserDetail] = React.useState({});
   useEffect(() => {
     const fetchUserDetail = async () => {
-      const res = await axios.post("/userDetails/getByUserID", {
+      const res = await axiosInstance.post("/userDetails/getByUserID", {
         userID: path,
       });
       setUserDetail(res.data[0]);
@@ -31,7 +31,7 @@ function Profile() {
   useEffect(() => {
     const fetchUserKoPosts = async () => {
       try {
-        const res = await axios.post("/userPosts/getAllPostsOfAUser", {
+        const res = await axiosInstance.post("/userPosts/getAllPostsOfAUser", {
           userID: path,
         });
         res.data.sort((a, b) => {
@@ -51,7 +51,7 @@ function Profile() {
   useEffect(() => {
     const fetchUserKoJobPosts = async () => {
       try {
-        const res = await axios.post("/jobPosts/getAllJobPostsOfAUser", {
+        const res = await axiosInstance.post("/jobPosts/getAllJobPostsOfAUser", {
           userID: path,
         });
         res.data.sort((a, b) => {
@@ -70,7 +70,7 @@ function Profile() {
   useEffect(() => {
     const fetchUserKoBlogs = async () => {
       try {
-        const res = await axios.post("/blogs/getAllBlogsOfAUser", {
+        const res = await axiosInstance.post("/blogs/getAllBlogsOfAUser", {
           userID: path,
         });
         res.data.sort((a, b) => {

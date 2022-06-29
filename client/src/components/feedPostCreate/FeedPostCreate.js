@@ -4,7 +4,6 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { useLocation } from "react-router-dom";
 import { AuthContext } from "../../context/authContext/AuthContext";
 import { useAPI } from "../../context/userDetailContext";
-import axios from "axios";
 import app from "../../firebase";
 
 import {
@@ -15,6 +14,7 @@ import {
 } from "firebase/storage";
 import "./feedPostCreate.scss";
 import { toast } from "react-toastify";
+import { axiosInstance } from "../../config";
 
 function FeedPostCreate({ setShowFeedPostCreateCon, setShowFeedCreateCon }) {
   const location = useLocation();
@@ -67,7 +67,7 @@ function FeedPostCreate({ setShowFeedPostCreateCon, setShowFeedCreateCon }) {
             postImg: downloadURL,
           };
           try {
-            axios.post("/userPosts/create", newPost);
+            axiosInstance.post("/userPosts/create", newPost);
             window.location.reload();
             toast.success("Post Created Successfully", { theme: "colored" });
           } catch (error) {

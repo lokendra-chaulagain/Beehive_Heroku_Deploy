@@ -4,9 +4,9 @@ import LeftBar from "../../components/leftBar/LeftBar";
 import "./settings.scss";
 import RightBar from "../../components/rightBar/RightBar";
 import { AuthContext } from "../../context/authContext/AuthContext";
-import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { axiosInstance } from "../../config";
 
 function Settings() {
   const { user } = useContext(AuthContext);
@@ -23,7 +23,7 @@ function Settings() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.put(`/users/update/${user._id}`, {
+      const res = await axiosInstance.put(`/users/update/${user._id}`, {
         username,
         email,
         password,

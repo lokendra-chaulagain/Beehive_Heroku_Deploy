@@ -1,5 +1,5 @@
-import axios from "axios";
 import React from "react";
+import { axiosInstance } from "../../config";
 import "./blogDeleteAlert.scss";
 
 function BlogDeleteAlert({ setShowBlogDeleteAlert, id }) {
@@ -7,7 +7,7 @@ function BlogDeleteAlert({ setShowBlogDeleteAlert, id }) {
   //Delete blog
   const handleBlogDelete = async () => {
     try {
-      await axios.delete(`/blogs/delete/${id}`);
+      await axiosInstance.delete(`/blogs/delete/${id}`);
       window.location.replace("/blogs");
     } catch (error) {
       console.log(error);

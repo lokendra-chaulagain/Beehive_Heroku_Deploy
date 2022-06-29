@@ -4,8 +4,8 @@ import LeftBar from "../../components/leftBar/LeftBar";
 import { useLocation } from "react-router-dom";
 import RightBar from "../../components/rightBar/RightBar";
 import Blog from "../../components/blog/Blog";
-import axios from "axios";
 import "./categories.scss";
+import { axiosInstance } from "../../config";
 
 function Categories() {
   //Fetching blogs according to category
@@ -15,7 +15,7 @@ function Categories() {
   const [catBlogs, setCatBlogs] = React.useState([{}]);
   useEffect(() => {
     const fetchCatBlogs = async () => {
-      const res = await axios.get(`/blogs/getAllBlogsOfACategory/${path}`);
+      const res = await axiosInstance.get(`/blogs/getAllBlogsOfACategory/${path}`);
       setCatBlogs(res.data);
     };
     fetchCatBlogs();
@@ -25,7 +25,7 @@ function Categories() {
   const [recentBlogsTitle, setRecentBlogsTitle] = React.useState([{}]);
   useEffect(() => {
     const fetchRecentBlogsTitle = async () => {
-      const res = await axios.get("/blogs//getAllTitles");
+      const res = await axiosInstance.get("/blogs//getAllTitles");
       setRecentBlogsTitle(res.data);
     };
     fetchRecentBlogsTitle();

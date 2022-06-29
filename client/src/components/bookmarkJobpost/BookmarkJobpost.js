@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { format } from "timeago.js";
 import "./bookmarkJobpost.scss";
 import { Link } from "react-router-dom";
-import axios from "axios";
 import { useAPI } from "../../context/userDetailContext";
+import { axiosInstance } from "../../config";
 
 function BookmarkJobpost({ bookmarkJobpostId }) {
   const { currentUserDetail } = useAPI();
@@ -13,7 +13,7 @@ function BookmarkJobpost({ bookmarkJobpostId }) {
   useEffect(() => {
     const fetchJobPostData = async () => {
       try {
-        const res = await axios.get(`/jobPosts/get/${bookmarkJobpostId}`);
+        const res = await axiosInstance.get(`/jobPosts/get/${bookmarkJobpostId}`);
         setJobPost(res.data);
       } catch (error) {
         console.log(error);
@@ -26,7 +26,7 @@ function BookmarkJobpost({ bookmarkJobpostId }) {
   const [removeBookmark, setRemoveBookmark] = useState(false);
   const handleRemoveBookmark = async (id) => {
     try {
-      await axios.put(`/userDetails/bookmark/${id}`, {
+      await axiosInstance.put(`/userDetails/bookmark/${id}`, {
         userDetailId: currentUserDetail?._id,
       });
       setRemoveBookmark(true);

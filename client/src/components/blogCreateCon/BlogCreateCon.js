@@ -8,10 +8,10 @@ import {
   uploadBytesResumable,
   getDownloadURL,
 } from "firebase/storage";
-import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./blogCreateCon.scss";
+import { axiosInstance } from "../../config";
 
 function BlogCreateCon() {
   const { user } = useContext(AuthContext);
@@ -58,7 +58,7 @@ function BlogCreateCon() {
       () => {
         getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
           try {
-            axios.post("/blogs/create", {
+            axiosInstance.post("/blogs/create", {
               title,
               desc,
               timeRead,

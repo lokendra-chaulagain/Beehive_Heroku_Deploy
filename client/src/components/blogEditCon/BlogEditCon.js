@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ImageSearchOutlinedIcon from "@mui/icons-material/ImageSearchOutlined";
-import axios from "axios";
 import "./blogEditCon.scss";
+import { axiosInstance } from "../../config";
 
 function BlogEditCon({ blog }) {
   console.log(blog);
@@ -16,7 +16,7 @@ function BlogEditCon({ blog }) {
   const handleUpdate = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.put(`/blogs/update/${blog._id}`, {
+      const res = await axiosInstance.put(`/blogs/update/${blog._id}`, {
         edtTitle,
         editDesc,
         editLocation,

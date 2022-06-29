@@ -8,9 +8,9 @@ import EditIcon from "@mui/icons-material/Edit";
 import { useAPI } from "../../context/userDetailContext";
 import { Link } from "react-router-dom";
 import { format } from "timeago.js";
-import axios from "axios";
 import "./jobPostLg.scss";
 import { AuthContext } from "../../context/authContext/AuthContext";
+import { axiosInstance } from "../../config";
 
 function JobPostLg({ jobPost }) {
   const { currentUserDetail } = useAPI();
@@ -20,7 +20,7 @@ function JobPostLg({ jobPost }) {
   const [bookmarked, setBookmarked] = useState(false);
   const handleBookmark = async (id) => {
     try {
-      await axios.put(`/userDetails/bookmark/${id}`, {
+      await axiosInstance.put(`/userDetails/bookmark/${id}`, {
         userDetailId: currentUserDetail?._id,
       });
       setBookmarked(true);
@@ -34,7 +34,7 @@ function JobPostLg({ jobPost }) {
   const [removeBookmark, setRemoveBookmark] = useState(false);
   const handleRemoveBookmark = async (id) => {
     try {
-      await axios.put(`/userDetails/bookmark/${id}`, {
+      await axiosInstance.put(`/userDetails/bookmark/${id}`, {
         userDetailId: currentUserDetail?._id,
       });
       setRemoveBookmark(true);

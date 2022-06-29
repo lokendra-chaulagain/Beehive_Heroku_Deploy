@@ -1,4 +1,4 @@
-import axios from "axios";
+
 import React, { useContext, useState } from "react";
 import { AuthContext } from "../../context/authContext/AuthContext";
 import AddPhotoAlternateIcon from "@mui/icons-material/AddPhotoAlternate";
@@ -17,6 +17,7 @@ import { useNavigate } from "react-router-dom";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { axiosInstance } from "../../config";
 
 function ProfileInfoEditCon() {
   const { user } = useContext(AuthContext);
@@ -105,7 +106,7 @@ function ProfileInfoEditCon() {
     e.preventDefault();
     setEditing(true);
     try {
-      await axios.put(`/userDetails/update/${currentUserDetail._id}`, {
+      await axiosInstance.put(`/userDetails/update/${currentUserDetail._id}`, {
         homeTown,
         bio,
         currentlyLiving,
@@ -171,7 +172,7 @@ function ProfileInfoEditCon() {
       () => {
         getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
           try {
-            axios.put(`userDetails/update/${currentUserDetail?._id}`, {
+            axiosInstance.put(`userDetails/update/${currentUserDetail?._id}`, {
               profilePic: downloadURL,
             });
             navigate(-1);
@@ -216,7 +217,7 @@ function ProfileInfoEditCon() {
       () => {
         getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
           try {
-            axios.put(`userDetails/update/${currentUserDetail._id}`, {
+            axiosInstance.put(`userDetails/update/${currentUserDetail._id}`, {
               coverPic: downloadURL,
             });
             window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
